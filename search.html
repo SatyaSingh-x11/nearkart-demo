@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search - NearKart</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .glass {
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-white via-purple-50 to-indigo-100 text-gray-800">
+
+<!-- NAVBAR -->
+<div class="fixed top-0 w-full bg-white/70 backdrop-blur border-b px-6 py-3 z-50">
+  <input id="searchInput"
+    placeholder="Search products, shops..."
+    class="w-full p-3 rounded-xl border shadow outline-none">
+</div>
+
+<div class="pt-20 px-4 md:px-20 space-y-8">
+
+  <!-- AI SUGGESTIONS -->
+  <div class="glass p-4 rounded-2xl">
+    <h3 class="text-sm text-gray-500 mb-2">Suggestions</h3>
+
+    <div class="flex flex-wrap gap-2">
+      <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">Milk nearby</span>
+      <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">Medical stores open</span>
+      <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">Snacks near me</span>
+    </div>
+  </div>
+
+  <!-- FILTERS -->
+  <div class="flex gap-2 overflow-x-auto">
+
+    <span class="px-3 py-1 bg-white shadow rounded-full text-sm">Nearby</span>
+    <span class="px-3 py-1 bg-white shadow rounded-full text-sm">Available</span>
+    <span class="px-3 py-1 bg-white shadow rounded-full text-sm">Top Rated</span>
+    <span class="px-3 py-1 bg-white shadow rounded-full text-sm">Open Now</span>
+
+  </div>
+
+  <!-- RESULTS -->
+  <div id="results" class="space-y-4">
+
+    <!-- SHOP RESULT -->
+    <div class="glass p-4 rounded-xl flex gap-4 items-center">
+
+      <img src="assets/shop1.jpg" class="w-20 h-20 rounded-xl object-cover">
+
+      <div>
+        <h3 class="font-semibold">Ravi Medicals</h3>
+        <p class="text-sm text-gray-500">Available • 0.5 km</p>
+      </div>
+
+    </div>
+
+    <!-- PRODUCT RESULT -->
+    <div class="glass p-4 rounded-xl flex gap-4 items-center">
+
+      <img src="assets/product1.jpg" class="w-20 h-20 rounded-xl object-cover">
+
+      <div>
+        <h3 class="font-semibold">Paracetamol</h3>
+        <p class="text-sm text-gray-500">Available nearby</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+const data = [
+  {type:"shop", name:"Ravi Medicals", img:"assets/shop1.jpg"},
+  {type:"shop", name:"City Store", img:"assets/shop2.jpg"},
+  {type:"product", name:"Milk", img:"assets/product2.jpg"},
+  {type:"product", name:"Paracetamol", img:"assets/product1.jpg"},
+  {type:"product", name:"Snacks", img:"assets/product4.jpg"}
+];
+
+const input = document.getElementById("searchInput");
+const results = document.getElementById("results");
+
+input.addEventListener("input", () => {
+  const value = input.value.toLowerCase();
+
+  results.innerHTML = "";
+
+  data
+    .filter(item => item.name.toLowerCase().includes(value))
+    .forEach(item => {
+      const div = document.createElement("div");
+
+      div.className = "glass p-4 rounded-xl flex gap-4 items-center";
+
+      div.innerHTML = `
+        <img src="${item.img}" class="w-20 h-20 rounded-xl object-cover">
+        <div>
+          <h3 class="font-semibold">${item.name}</h3>
+          <p class="text-sm text-gray-500">${item.type}</p>
+        </div>
+      `;
+
+      results.appendChild(div);
+    });
+});
+</script>
+
+</body>
+</html>
