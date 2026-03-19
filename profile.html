@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - NearKart</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .glass {
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-white via-purple-50 to-indigo-100 text-gray-800">
+
+<!-- NAVBAR -->
+<div class="fixed top-0 w-full bg-white/70 backdrop-blur border-b flex justify-between px-6 py-3 z-50">
+  <h1 class="text-purple-600 font-bold">NearKart</h1>
+
+  <div class="flex gap-4">
+    <a href="explore.html">Explore</a>
+    <a href="index.html">Home</a>
+  </div>
+</div>
+
+<div class="pt-20 px-4 md:px-20 space-y-10">
+
+  <!-- USER CARD -->
+  <div class="glass p-6 rounded-2xl shadow flex items-center gap-4">
+
+    <div class="w-16 h-16 bg-purple-200 rounded-full flex items-center justify-center text-xl">
+      👤
+    </div>
+
+    <div>
+      <h2 class="font-semibold">User Name</h2>
+      <p class="text-sm text-gray-500">Location: Mysore</p>
+    </div>
+
+  </div>
+
+  <!-- ACTIONS -->
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <div class="glass p-6 rounded-2xl shadow hover:scale-105 transition">
+      ❤️ Wishlist
+    </div>
+
+    <div class="glass p-6 rounded-2xl shadow hover:scale-105 transition">
+      🔔 Notifications
+    </div>
+
+    <div class="glass p-6 rounded-2xl shadow hover:scale-105 transition">
+      ⚙ Settings
+    </div>
+
+  </div>
+
+  <!-- RECENT -->
+  <div>
+    <h2 class="font-semibold mb-3">Recent Activity</h2>
+
+    <div class="space-y-2">
+      <div class="glass p-3 rounded-xl">Viewed Ravi Medicals</div>
+      <div class="glass p-3 rounded-xl">Searched for Paracetamol</div>
+    </div>
+  </div>
+
+  <!-- LOGOUT -->
+  <button onclick="logout()"
+    class="bg-red-500 text-white px-6 py-2 rounded-xl">
+    Logout
+  </button>
+
+</div>
+
+<script>
+function logout() {
+  localStorage.removeItem("user");
+  window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>
