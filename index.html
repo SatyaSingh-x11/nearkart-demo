@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NearKart</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .glass {
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-white via-purple-50 to-indigo-100 text-gray-800">
+
+<!-- NAVBAR -->
+<div class="fixed top-0 w-full bg-white/70 backdrop-blur border-b flex justify-between px-6 py-3 z-50">
+  <h1 class="text-purple-600 font-bold">NearKart</h1>
+
+  <div class="flex gap-4">
+    <a href="explore.html">Explore</a>
+    <a href="search.html">Search</a>
+    <a href="partner.html">Partner</a>
+  </div>
+</div>
+
+<div class="pt-20 px-4 md:px-20 space-y-16">
+
+  <!-- HERO -->
+  <div class="grid md:grid-cols-2 gap-10 items-center">
+
+    <div>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+        Everything You Need <br>
+        <span class="text-purple-600">Nearby Instantly</span>
+      </h1>
+
+      <p class="text-gray-500 mt-3">
+        Discover shops, products and availability in seconds
+      </p>
+
+      <a href="explore.html"
+        class="mt-6 inline-block bg-purple-600 text-white px-6 py-3 rounded-xl shadow hover:scale-105 transition">
+        Explore Now
+      </a>
+    </div>
+
+    <img src="assets/hero1.jpg" class="rounded-2xl shadow">
+  </div>
+
+  <!-- CATEGORIES -->
+  <div>
+    <h2 class="font-semibold mb-4">Browse Categories</h2>
+
+    <div class="grid md:grid-cols-4 gap-4">
+
+      <div class="rounded-xl overflow-hidden shadow hover:scale-105 transition">
+        <img src="assets/grocery.jpg" class="h-32 w-full object-cover">
+        <div class="p-3 bg-white">Groceries</div>
+      </div>
+
+      <div class="rounded-xl overflow-hidden shadow hover:scale-105 transition">
+        <img src="assets/medical.jpg" class="h-32 w-full object-cover">
+        <div class="p-3 bg-white">Medicines</div>
+      </div>
+
+      <div class="rounded-xl overflow-hidden shadow hover:scale-105 transition">
+        <img src="assets/stationery.jpg" class="h-32 w-full object-cover">
+        <div class="p-3 bg-white">Stationery</div>
+      </div>
+
+      <div class="rounded-xl overflow-hidden shadow hover:scale-105 transition">
+        <img src="assets/electronics.jpg" class="h-32 w-full object-cover">
+        <div class="p-3 bg-white">Electronics</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TRENDING -->
+  <div>
+    <h2 class="font-semibold mb-4">🔥 Trending</h2>
+
+    <div class="flex gap-4 overflow-x-auto">
+
+      <div class="bg-white p-4 rounded-xl shadow min-w-[150px]">Milk</div>
+      <div class="bg-white p-4 rounded-xl shadow min-w-[150px]">Medicine</div>
+      <div class="bg-white p-4 rounded-xl shadow min-w-[150px]">Snacks</div>
+      <div class="bg-white p-4 rounded-xl shadow min-w-[150px]">Books</div>
+
+    </div>
+  </div>
+
+  <!-- TRUST -->
+  <div class="glass p-8 rounded-2xl text-center">
+    <h2 class="text-xl font-bold">Why NearKart?</h2>
+
+    <p class="text-gray-600 mt-2">
+      Save time. Find nearby products instantly. No more searching shop to shop.
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>
