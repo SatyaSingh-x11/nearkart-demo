@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - NearKart</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .glass {
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-white via-purple-50 to-indigo-100 text-gray-800">
+
+<!-- NAVBAR -->
+<div class="fixed top-0 w-full bg-white/70 backdrop-blur border-b flex justify-between px-6 py-3 z-50">
+  <h1 class="text-purple-600 font-bold">NearKart</h1>
+
+  <div class="flex gap-4">
+    <a href="profile.html">Profile</a>
+    <a href="index.html">Home</a>
+  </div>
+</div>
+
+<div class="pt-20 px-4 md:px-20 space-y-10">
+
+  <!-- HEADER -->
+  <div>
+    <h1 class="text-2xl font-bold">Shop Dashboard</h1>
+    <p class="text-gray-500">Manage your shop performance</p>
+  </div>
+
+  <!-- STATS -->
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <div class="glass p-6 rounded-2xl text-center shadow">
+      <h2 class="text-2xl font-bold">120</h2>
+      <p class="text-gray-500">Views</p>
+    </div>
+
+    <div class="glass p-6 rounded-2xl text-center shadow">
+      <h2 class="text-2xl font-bold">45</h2>
+      <p class="text-gray-500">Search Appearances</p>
+    </div>
+
+    <div class="glass p-6 rounded-2xl text-center shadow">
+      <h2 class="text-2xl font-bold">12</h2>
+      <p class="text-gray-500">Products</p>
+    </div>
+
+  </div>
+
+  <!-- ANALYTICS -->
+  <div class="glass p-6 rounded-2xl shadow">
+    <h2 class="font-semibold mb-4">Analytics</h2>
+
+    <img src="assets/analytics.jpg" class="rounded-xl shadow">
+  </div>
+
+  <!-- PRODUCTS -->
+  <div>
+    <h2 class="font-semibold mb-4">Your Products</h2>
+
+    <div class="grid md:grid-cols-3 gap-4">
+
+      <div class="bg-white rounded-xl shadow overflow-hidden">
+        <img src="assets/product1.jpg" class="h-32 w-full object-cover">
+        <div class="p-2 text-sm">Paracetamol</div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow overflow-hidden">
+        <img src="assets/product2.jpg" class="h-32 w-full object-cover">
+        <div class="p-2 text-sm">Milk</div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow overflow-hidden">
+        <img src="assets/product3.jpg" class="h-32 w-full object-cover">
+        <div class="p-2 text-sm">Notebook</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ADD PRODUCT -->
+  <div class="text-center">
+    <button class="bg-purple-600 text-white px-6 py-3 rounded-xl shadow hover:scale-105 transition">
+      + Add New Product
+    </button>
+  </div>
+
+  <!-- ACTIVITY -->
+  <div>
+    <h2 class="font-semibold mb-4">Recent Activity</h2>
+
+    <div class="space-y-2">
+      <div class="glass p-3 rounded-xl">Your shop was viewed 10 times today</div>
+      <div class="glass p-3 rounded-xl">New user searched your product</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
